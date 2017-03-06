@@ -12,7 +12,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="col-md-4" <?php post_class(); ?>>
 <?php
 	global $post;
 	$post_categories = wp_get_post_categories($post->ID);

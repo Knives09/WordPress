@@ -13,7 +13,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-jkvgkhvkfhkfjgf
 <?php
 	$t = wp_get_post_tags(the_ID());
 	?>

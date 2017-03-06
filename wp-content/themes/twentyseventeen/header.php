@@ -36,7 +36,7 @@
 		<div id="masthead" class="site-header col-md-12" role="banner">
 			<?php if ( has_nav_menu( 'top' ) ) : ?>
 				<div class="navigation">
-					<div class="wrap">
+					<div>
 						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 					</div><!-- .wrap -->
 				</div><!-- .navigation-top -->

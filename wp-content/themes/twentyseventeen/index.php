@@ -30,7 +30,6 @@ get_header(); ?>
 
 	<div id="" class="content-area">
 		<main id="main" class="site-main" role="main">
-khgkhfljfjlg
 			<?php
 			if ( have_posts() ) :
 
