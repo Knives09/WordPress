@@ -37,6 +37,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 			<div class="row">
 			<?php
+			$x=0;
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
@@ -46,7 +47,11 @@ get_header(); ?>
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
 				get_template_part( 'template-parts/post/content', get_post_format() );
-
+				$x++;
+				if($x>2){
+					$x=0;
+					echo('</div><div class="row">');
+				}
 			endwhile;
 
 			?>
