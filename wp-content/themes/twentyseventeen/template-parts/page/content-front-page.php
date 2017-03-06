@@ -1,27 +1,3 @@
-<style>
-	.row {
-		box-sizing: border-box;
-		padding-left: 10px;
-	}
-
-	
-	.col1, .col2, .col3 {
-		left: 5px;
-		border: 2px solid black;
-		margin-bottom: 10px;
-		display: inline-block;
-		padding: 5px;
-		width: 24%;
-	}
-  
-	body {
-		border-width: 0px;
-		padding: 0px;
-		margin: 0px;
-		font-size: 90%;
-		background-color: #e7e7de
-}
-</style>  
 <?php
 /**
  * Displays content for front page
@@ -69,7 +45,9 @@ $res = json_decode($response);
 			</div><!-- .entry-content -->
 
 		</div><!-- .wrap -->
-		</article><!-- #post-## -->
+</article><!-- #post-## -->
+		</div>
+	</div>	
 <div class="container" style="width: 100%;height: 100%;">  
 <div class="row">
 	<?php
@@ -113,7 +91,7 @@ else{
 $data = "";
 }
 ?>
-					<div class="col<?php echo($x);?>"> 
+					<div class="col-md-4"> 
                         <div class="half">
                             <article class="article">
                             <footer>
@@ -140,5 +118,3 @@ if($x>3){
 }
 ?>     
 </div>
-
-

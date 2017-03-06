@@ -24,23 +24,27 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-<div class="headerslider">
-		<?php
-		if( is_home() || is_front_page() ){
- 	echo do_shortcode('[sp_imageslider speed="3000" auto_controls="false" autoplay_interval="3000" ]');}
-		// get_template_part( 'template-parts/header/header', 'image' ); ?>
-		</div>
+	<div class="headerslider">
+			<?php
+			if( is_home() || is_front_page() ){
+	 	echo do_shortcode('[sp_imageslider speed="3000" auto_controls="false" autoplay_interval="3000" ]');}
+			// get_template_part( 'template-parts/header/header', 'image' ); ?>
+	</div>
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
-	<header id="masthead" class="site-header" role="banner">
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+	<div class="container">
+	<div class="row">
+		<div id="masthead" class="site-header col-md-12" role="banner">
+			<?php if ( has_nav_menu( 'top' ) ) : ?>
+				<div class="navigation">
+					<div class="wrap">
+						<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+					</div><!-- .wrap -->
+				</div><!-- .navigation-top -->
+			<?php endif; ?>
 
-	</header><!-- #masthead -->
+		</div><!-- #masthead -->
+	</div>	
+	</div>
 
 	<?php
 	// If a regular post or page, and not the front page, show the featured image.
