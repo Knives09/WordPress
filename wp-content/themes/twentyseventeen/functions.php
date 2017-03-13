@@ -395,6 +395,7 @@ function additional_custom_styles() {
     /*Enqueue The Styles*/
     wp_enqueue_style( 'twentyseventeen', get_theme_file_uri() . '/assets/css/bootstrap.min.css' );
     wp_enqueue_style( 'twentyseventeen2', get_theme_file_uri() . '/assets/css/bootstrap-theme.min.css' );
+    wp_enqueue_style( 'twentyseventeen3', get_theme_file_uri() . '/assets/css/style-custom.css' );
     wp_enqueue_script( 'twentyseventeen', get_theme_file_uri() . '/assets/js/bootstrap.min.js' );
 
 }

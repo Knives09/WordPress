@@ -358,7 +358,7 @@ class WpPostsCarouselGenerator {
             if ( $params['show_more_button'] === 'true' ) {
                 $buttons = '<p class="wp-posts-carousel-buttons">';
                     $buttons.= '<a href="' . $post_url . '" class="wp-posts-carousel-more-button button" title="' . __('Read more', 'wp-posts-carousel') . ' ' . $post->post_title . '">' . __('read more', 'wp-posts-carousel') . '</a>';
-                $buttons.= '<p>';
+                $buttons.= '</p>';
             }
 
             /*
@@ -376,15 +376,15 @@ class WpPostsCarouselGenerator {
                     ));
 
                     $out.= '<div class="wp-posts-carousel-details">';
-                        $out.= apply_filters('wpc_item_title', $title, array(
-                            'post_url'           => $post_url,
-                            'post'               => $post,
-                            'params'             => $params,
-                        ));
                         $out.= apply_filters('wpc_item_created_date', $created_date, array(
                             'date'   => get_the_date(),
                             'post'   => $post,
                             'params' => $params,
+                        ));
+                        $out.= apply_filters('wpc_item_title', $title, array(
+                            'post_url'           => $post_url,
+                            'post'               => $post,
+                            'params'             => $params,
                         ));
                         $out.= apply_filters('wpc_item_categories', $category, array(
                             'categories_list'    => $categories_list,
