@@ -1,6 +1,12 @@
 body{
 	font-family: 'Montserrat', sans-serif !important;
+	.car-row{
+		padding-left: 5px;
+		padding-right: 3px;
+	}
 	.title{
+		margin-bottom: 20px;
+		margin-top: 10px;
 		h2{
 			text-transform: uppercase;
 			font-size: 22px;
@@ -11,7 +17,7 @@ body{
 				content: "";
 			    width: 30px !important;
 			    position: absolute;
-			    left: 12px;
+			    left: 8px;
 			    height: 30px;
 			    border: 5px solid #ccc;
 			}
@@ -19,6 +25,23 @@ body{
 	}
 	.headerslider{
 		.bx-wrapper{
+			.bx-controls-direction{
+				a{
+					border: 4px solid #fff;
+					width: 45px;
+					height: 45px;
+				}
+				.bx-prev{
+					left: 10px;
+					background: url(../images/arrow-prev.png) no-repeat 11px 10px;
+					background-size: 12px 19px;
+				}
+				.bx-next{
+					right: 10px;
+					background: url(../images/arrow-next.png) no-repeat 13px 10px;
+					background-size: 12px 19px;
+				}
+			}
 			.bx-viewport{
 				left: 0px;
 				li{
@@ -31,6 +54,8 @@ body{
 						left: 20%;
 						span{
 							font-size: 30px;
+							padding-left: 0px;
+
 							&:before{
 								content: "In evidenza";
 								font-size: 45px;
@@ -64,18 +89,33 @@ body{
 				li{
 					width: calc((99% - 20px) / 3);
 					margin-right: 10px;
-					background-color: red;
+					background-color: #9E0A17;
 					color: white;
 					padding: 30px;
 					text-transform: uppercase;
 					&:last-child{
 						margin-right: 0px;
 					}
+					a{
+						color: white;
+						font-size:20px;
+						font-weight: 100;
+					}
 				}
 			}
 		}
 	}
 	.compact-theme.wp-posts-carousel{
+		padding-bottom: 30px;
+		.owl-dots{
+			top: inherit;
+			right: inherit;
+			bottom: 5px;
+		    width: 100%;
+		}
+		.wp-posts-carousel-slide{
+			padding-top: 0px;
+		}
 		.wp-posts-carousel-container{
 			border: 1px solid #979797 !important;
 			padding: 0px !important;
@@ -132,5 +172,87 @@ body{
 				padding: 10px 30px;
 			}
 		}
+	}
+	.wpsisac-slick-slider{
+		border: 1px solid #979797 !important;
+		.slick-image-slide{
+			img{
+				width: 100%;
+			}
+			.slide-wrap{
+				.slider-content{
+					top: inherit !important;
+					bottom: -3px;
+					width: 100%  !important;
+					.slider-short-content{
+						position:absolute;
+						bottom: 0px;
+						left: 0px;
+						width: 100%;
+						padding: 30px;
+						background-color: #F7F7F7;
+						p{
+							font-weight: 100;
+	    					font-size: 16px;
+							color: black;
+							text-align: left;
+							text-shadow: 0px;
+							text-shadow: 0 0px 0px #000;
+							margin-bottom: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.status-publish{
+		.wrap{
+			height: 501px !important;
+			border: 1px solid #979797 !important;
+			padding: 30px !important;
+			.today{
+				padding: 0px !important;
+				p{
+					font-weight: 100;
+	    			font-size: 24px;
+	    			height: 430px;
+	    			overflow: hidden;
+				}
+			}
+		}
+	}
+	.video-homepage{
+		margin-bottom: 15px;
+		.half{
+			border: 1px solid #979797 !important;
+			footer{
+				padding: 30px;
+				.date{
+					font-weight: 100;
+    				font-size: 16px;
+				}
+				h2{
+				    font-weight: bold !important;
+				    height: 64px !important;
+				    padding: 0px !important;
+				    overflow: hidden !important;
+				    font-size: 24px !important;
+				}
+				p{
+					font-weight: 100;
+    				font-size: 16px;
+    				padding: 0px;
+    				margin-bottom: 0px;
+    				height: 90px;
+    				overflow: hidden;
+				}
+			}
+			figure{
+				margin: 0px;
+			}
+		}
+	}
+	footer.site-footer{
+		background-color: #181818;
 	}
 }

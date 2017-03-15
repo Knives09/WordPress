@@ -48,7 +48,13 @@ $res = json_decode($response);
 </article><!-- #post-## -->
 		</div>
 	</div>	
-<div class="container" style="width: 100%;height: 100%;">  
+<div class="row">
+		<div class="title col-md-12">
+			<h2>
+				VIDEO
+			</h2>
+		</div>
+	</div>	 
 <div class="row">
 	<?php
 	$x=1;
@@ -91,21 +97,21 @@ else{
 $data = "";
 }
 ?>
-					<div class="col-md-4"> 
+					<div class="col-md-4 video-homepage"> 
                         <div class="half">
                             <article class="article">
-                            <footer>
-                                    <span class="date"><?php echo date('d/m/Y',strtotime($data));?></span>
-                                    <h6 style="height: 56px !important"><?php echo $titleThumb;?></h6>
-                                    <?php if($description!=""){?>
-                                    <h2><?php echo($description); ?>..</h2>
-                                    <?php } ?>
-                                </footer>
                                 <a href="<?php echo "./video-details?videoid=$idVideo"?>">
                                 <figure class="gallery-media">
                                     <img src="<?php echo $thumbnails; ?>" alt="">
                                 </figure>
                                 </a>
+                                <footer>
+                                    <span class="date"><?php echo date('d/m/Y',strtotime($data));?></span>
+                                    <h2><?php echo $titleThumb;?></h2>
+                                    <?php if($description!=""){?>
+                                    <p><?php echo($description); ?>..</p>
+                                    <?php } ?>
+                                </footer>
                             </article>
                         </div>
                      </div>
