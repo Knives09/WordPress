@@ -23,7 +23,59 @@ body{
 			}
 		}
 	}
+	header{
+		height: 80px;
+		padding: 20px 30px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		    z-index: 999;
+		h1{
+			text-transform: uppercase;
+			font-size: 30px;
+			font-weight: 300;
+			color: #fff;
+			margin-left: 50px;
+			position: relative;
+			@media only screen and( max-width:768px ){
+				font-size: 16px;
+    			line-height: 41px;
+			}
+			&:before{
+				content: "";
+			    width: 30px !important;
+			    position: absolute;
+			    left: -50px;
+    			top: 6px;
+			    height: 30px;
+			    border: 5px solid #fff;
+			}
+		}
+		a{
+			float: right;
+			position: absolute;
+			right: 30px;
+			top: 25px;
+			color: white;
+			font-size: 25px;
+			&:hover{
+				color: white;
+			}
+		}
+	}
 	.headerslider{
+		position: relative;
+		&:after{
+			content:"";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: rgba(0,0,0,0.2);
+			z-index: 50;
+			top: 0px;
+			left: 0px;
+		}
 		.bx-wrapper{
 			.bx-controls-direction{
 				a{
@@ -32,11 +84,13 @@ body{
 					height: 45px;
 				}
 				.bx-prev{
+					z-index: 60;
 					left: 10px;
 					background: url(../images/arrow-prev.png) no-repeat 11px 10px;
 					background-size: 12px 19px;
 				}
 				.bx-next{
+					z-index: 60;
 					right: 10px;
 					background: url(../images/arrow-next.png) no-repeat 13px 10px;
 					background-size: 12px 19px;
@@ -78,13 +132,32 @@ body{
 		}
 	}
 	#masthead{
+		z-index: 999;
 		width: 100%;
 		background-color: transparent;
 		margin-top: -70px;
 		margin-bottom: 20px;
+		@media only screen and(max-width: 768px){
+			margin-top: 0px;
+		}
 		.navigation{
 			width: 60%;
 			margin-left: 20%;
+			@media only screen and(max-width: 991px){
+				width: 80%;
+				margin-left: 10%;
+			}
+			@media only screen and(max-width: 768px){
+				width: calc(100% - 20px);
+    			margin-left: 10px;
+    		}
+			#top-menu{
+				@media only screen and(max-width: 768px){
+					padding: 0px;
+					border: 0px;
+					margin-top: 24px;
+				}
+			}
 			.main-navigation{
 				li{
 					width: calc((99% - 20px) / 3);
@@ -93,6 +166,14 @@ body{
 					color: white;
 					padding: 30px;
 					text-transform: uppercase;
+					@media only screen and(max-width: 768px){
+						width: 100%;
+						border: 0px;
+						margin-bottom: 5px;
+					}
+					@media only screen and(max-width: 991px){
+						padding: 20px;
+					}
 					&:last-child{
 						margin-right: 0px;
 					}
@@ -100,7 +181,19 @@ body{
 						color: white;
 						font-size:20px;
 						font-weight: 100;
+						@media only screen and(max-width: 991px){
+							font-size:14px;
+						}
 					}
+				}
+			}
+			.menu-toggle{
+				text-transform: uppercase;
+				font-weight: 100;
+				font-size: 16px;
+				border: 2px solid #222;
+				&:focus{
+					outline: none;
 				}
 			}
 		}
@@ -204,6 +297,38 @@ body{
 				}
 			}
 		}
+		.slick-prev{
+			border: 4px solid #fff !important;
+		    width: 45px;
+		    height: 45px;
+		    left: 20px !important;
+		    background: url(../images/arrow-prev.png) no-repeat 11px 10px !important;
+		    background-size: 12px 19px;
+		    &:hover{
+		    	background-color: rgba(255, 255, 255,0.3) !important;
+		    	background: url(../images/arrow-prev.png) no-repeat 11px 10px !important;
+		    }
+		    &:focus{
+		    	background-color: rgba(255, 255, 255,0.3) !important;
+		    	background: url(../images/arrow-prev.png) no-repeat 11px 10px !important;
+		    }
+		}
+		.slick-next{
+			border: 4px solid #fff !important;
+		    width: 45px;
+		    height: 45px;
+		    right: 20px !important;
+		    background: url(../images/arrow-next.png) no-repeat 11px 10px !important;
+		    background-size: 12px 19px;
+		    &:hover{
+		    	background-color: rgba(255, 255, 255,0.3) !important;
+		    	background: url(../images/arrow-next.png) no-repeat 11px 10px !important;
+		    }
+		    &:focus{
+		    	background-color: rgba(255, 255, 255,0.3) !important;
+		    	background: url(../images/arrow-next.png) no-repeat 11px 10px !important;
+		    }
+		}
 	}
 	.status-publish{
 		.wrap{
@@ -237,6 +362,7 @@ body{
 				    padding: 0px !important;
 				    overflow: hidden !important;
 				    font-size: 24px !important;
+				    color: #222;
 				}
 				p{
 					font-weight: 100;
@@ -245,6 +371,7 @@ body{
     				margin-bottom: 0px;
     				height: 90px;
     				overflow: hidden;
+    				color: #222;
 				}
 			}
 			figure{

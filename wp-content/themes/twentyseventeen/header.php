@@ -24,8 +24,12 @@
 
 <body <?php body_class(); ?>>
 <header>
-	
+	<h1>cognitivismo.com</h1>
+	<a href="#" title=""><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 </header><!-- /header -->
+<div class="main-menu">
+	
+</div>
 <div id="page" class="site">
 	<div class="headerslider">
 			<?php

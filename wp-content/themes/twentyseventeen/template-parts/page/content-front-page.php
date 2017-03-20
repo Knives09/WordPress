@@ -97,7 +97,7 @@ else{
 $data = "";
 }
 ?>
-					<div class="col-md-4 video-homepage"> 
+					<div class="col-md-4 col-sm-4 video-homepage"> 
                         <div class="half">
                             <article class="article">
                                 <a href="<?php echo "./video-details?videoid=$idVideo"?>">
