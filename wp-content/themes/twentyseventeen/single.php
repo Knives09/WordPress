@@ -10,7 +10,9 @@
  * @version 1.0
  */
 
-get_header(); ?>
+include 'noMenu-header.php';
+ ?>
+
 
 <div class="container">
 	<div class="content-area row">

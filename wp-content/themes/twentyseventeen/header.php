@@ -19,6 +19,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8" async defer></script>
 <?php wp_head(); ?>
 </head>
 
@@ -27,6 +28,27 @@
 	<h1>cognitivismo.com</h1>
 	<a href="#" title=""><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 </header><!-- /header -->
+<div class="side-menu">
+	<nav>
+		<ul>
+			<li><a href="" title="">Ricerca</a></li>
+			<li><a href="" title="">Psicoterapia</a></li>
+			<li><a href="" title="">Homepage</a></li>
+			<li><a href="" title="">Journal Club</a></li>
+		</ul>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</nav>
+</div>
+<script>
+	$('header .glyphicon-menu-hamburger').click(function(event) {
+		/* Act on the event */
+		$('.side-menu').addClass('active');
+	});
+	$('.side-menu .glyphicon-remove').click(function(event) {
+		/* Act on the event */
+		$('.side-menu').removeClass('active');
+	});
+</script>
 <div class="main-menu">
 	
 </div>
@@ -38,7 +60,7 @@
 			// get_template_part( 'template-parts/header/header', 'image' ); ?>
 	</div>
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
-	<div id="masthead" class="site-header" role="banner">
+	<div id="masthead" class="site-header <?php if(is_home()||is_front_page()){echo('margined');} ?>" role="banner">
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<div class="navigation">
 				<div>

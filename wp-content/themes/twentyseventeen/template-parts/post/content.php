@@ -11,8 +11,8 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" class="col-md-4" <?php post_class(); ?>>
+<div class="col-md-4 col-sm-4">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php
 	global $post;
 	$post_categories = wp_get_post_categories($post->ID);
@@ -30,6 +30,20 @@
 			echo twentyseventeen_get_svg( array( 'icon' => 'thumb-tack' ) );
 		endif;
 	?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) {?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
+			</a>
+		</div><!-- .post-thumbnail -->
+	<?php }else{ ?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="">
+			</a>
+		</div><!-- .post-thumbnail -->
+	<?php }?>
+
 	<header class="entry-header">
 			<?php
 			if ( 'post' === get_post_type() ) :
@@ -68,14 +82,6 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
-		<div class="post-thumbnail">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
-			</a>
-		</div><!-- .post-thumbnail -->
-	<?php endif; ?>
-
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
@@ -98,3 +104,4 @@
 	<?php endif; ?>
 
 </article><!-- #post-## -->
+</div>
