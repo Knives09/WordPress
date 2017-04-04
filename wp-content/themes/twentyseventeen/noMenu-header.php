@@ -27,6 +27,27 @@
 	<h1>cognitivismo.com</h1>
 	<a href="#" title=""><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 </header><!-- /header -->
+<div class="side-menu">
+	<nav>
+		<ul>
+			<li><a href="" title="">Ricerca</a></li>
+			<li><a href="" title="">Psicoterapia</a></li>
+			<li><a href="" title="">Homepage</a></li>
+			<li><a href="" title="">Journal Club</a></li>
+		</ul>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</nav>
+</div>
+<script>
+	$('header .glyphicon-menu-hamburger').click(function(event) {
+		/* Act on the event */
+		$('.side-menu').addClass('active');
+	});
+	$('.side-menu .glyphicon-remove').click(function(event) {
+		/* Act on the event */
+		$('.side-menu').removeClass('active');
+	});
+</script>
 <div class="main-menu">
 	
 </div>
