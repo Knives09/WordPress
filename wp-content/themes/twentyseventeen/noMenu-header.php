@@ -38,16 +38,6 @@
 		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 	</nav>
 </div>
-<script>
-	$('header .glyphicon-menu-hamburger').click(function(event) {
-		/* Act on the event */
-		$('.side-menu').addClass('active');
-	});
-	$('.side-menu .glyphicon-remove').click(function(event) {
-		/* Act on the event */
-		$('.side-menu').removeClass('active');
-	});
-</script>
 <div class="main-menu">
 	
 </div>

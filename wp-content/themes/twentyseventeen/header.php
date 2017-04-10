@@ -19,7 +19,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.0.min.js" type="text/javascript" charset="utf-8" async defer></script>
 <?php wp_head(); ?>
 </head>
 
@@ -39,16 +38,6 @@
 		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 	</nav>
 </div>
-<script>
-	$('header .glyphicon-menu-hamburger').click(function(event) {
-		/* Act on the event */
-		$('.side-menu').addClass('active');
-	});
-	$('.side-menu .glyphicon-remove').click(function(event) {
-		/* Act on the event */
-		$('.side-menu').removeClass('active');
-	});
-</script>
 <div class="main-menu">
 	
 </div>

@@ -42,6 +42,15 @@
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
+<script>
+	jQuery('header .glyphicon-menu-hamburger').click(function(event) {
+		/* Act on the event */
+		jQuery('.side-menu').addClass('active');
+	});
+	jQuery('.side-menu .glyphicon-remove').click(function(event) {
+		/* Act on the event */
+		jQuery('.side-menu').removeClass('active');
+	});
+</script>
 </body>
 </html>
