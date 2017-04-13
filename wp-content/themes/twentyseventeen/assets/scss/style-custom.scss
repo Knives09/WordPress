@@ -39,7 +39,7 @@ body{
 			color: #fff;
 			margin-left: 50px;
 			position: relative;
-			@media only screen and( max-width:768px ){
+			@media only screen and( max-width:767px ){
 				font-size: 16px;
     			line-height: 41px;
 			}
@@ -71,12 +71,17 @@ body{
 	.side-menu{
 		height: 100vh;
 		width: 50%;
-		position: absolute;
+		position: fixed;
 		right: -50%;
 		top: 0px;
 		background-color: #fff;
 		z-index: 9999;
 		transition: all 0.6s ease-in-out;
+		@media only screen and( max-width:767px ){
+			width: 100%;
+			right: -100%;
+			overflow: auto;
+		}
 		&.active{
 			right: 0%;
 		}
@@ -100,6 +105,10 @@ body{
     				font-size: 30px;
     				font-weight: bold;
     				text-transform: uppercase;
+    				@media only screen and( max-width:767px ){
+						width: 100%;
+						float: none;
+					}
     				a{
     					color: #fff;
     					&:hover{
@@ -128,6 +137,12 @@ body{
 				left: 50px;
 				top: inherit;
 				cursor: pointer;
+				@media only screen and( max-width:767px ){
+					bottom: inherit;
+					top: 40px;
+					left: 20px;
+					font-size: 30px;
+				}
 			}
 		}
 
@@ -174,9 +189,18 @@ body{
 						width: 60%;
 						bottom: 100px;
 						left: 20%;
+						@media only screen and( max-width:767px ){
+							width: 80%;
+							bottom: 20px;
+							left: 10%;
+						}
+
 						span{
 							font-size: 30px;
 							padding-left: 0px;
+							@media only screen and( max-width:767px ){
+								font-size: 20px;
+							}
 
 							&:before{
 								content: "In evidenza";
@@ -184,6 +208,10 @@ body{
 								color: white;
 								position: absolute;
 	    						top: -55px;
+	    						@media only screen and( max-width:767px ){
+									font-size: 22px;
+									top: -25px;
+								}
 							}
 						}
 					}
@@ -205,9 +233,12 @@ body{
 		background-color: transparent;
 		margin-bottom: 20px;
 		&.margined{
-			margin-top: -90px;
+			margin-top: -120px;
+			@media only screen and(max-width: 767px){
+				margin-top: 0px;
+			}
 		}
-		@media only screen and(max-width: 768px){
+		@media only screen and(max-width: 767px){
 			margin-top: 0px;
 		}
 		.navigation{
@@ -217,12 +248,13 @@ body{
 				width: 80%;
 				margin-left: 10%;
 			}
-			@media only screen and(max-width: 768px){
+			@media only screen and(max-width: 767px){
 				width: calc(100% - 20px);
     			margin-left: 10px;
+    			display: none;
     		}
 			#top-menu{
-				@media only screen and(max-width: 768px){
+				@media only screen and(max-width: 767px){
 					padding: 0px;
 					border: 0px;
 					margin-top: 24px;
@@ -253,13 +285,14 @@ body{
 					color: white;
 					padding: 30px;
 					text-transform: uppercase;
-					@media only screen and(max-width: 768px){
+					@media only screen and(max-width: 767px){
 						width: 100%;
 						border: 0px;
 						margin-bottom: 5px;
 					}
 					@media only screen and(max-width: 991px){
-						padding: 20px;
+						padding: 20px !important;
+						background-position:40px  !important;
 					}
 					&:last-child{
 						margin-right: 0px;
@@ -299,6 +332,32 @@ body{
 		.wp-posts-carousel-container{
 			border: 1px solid #979797 !important;
 			padding: 0px !important;
+			position: relative;
+			&:before{
+				content: "";
+			    width: 30px !important;
+			    position: absolute;
+			    left: 30px;
+			    top: 185px;
+			    height: 30px;
+			    border: 5px solid #ccc;
+			    z-index: 999;
+			}
+			&.ricerca{
+				&:before{
+					border: 5px solid #9E0A17;
+				}
+			}
+			&.psicoterapia{
+				&:before{
+					border: 5px solid #679D9E;
+				}
+			}
+			&.journal{
+				&:before{
+					border: 5px solid #F2C276;	
+				}		
+			}
 			.wp-posts-carousel-image{
 				width: 100% !important;
 	    		padding-top: 0px !important;
@@ -349,7 +408,22 @@ body{
 				top: 0px;
 				left: 0px;
 				width: 100%;
-				padding: 10px 30px;
+				padding: 24px 30px;
+				height: 58px;
+    			overflow: hidden;
+				a{
+					font-weight: 100;
+					text-transform: uppercase;
+					line-height: 26px;
+					&:after{
+						content:",";
+					}
+					&:last-child{
+						&:after{
+							content:"";
+						}
+					}
+				}
 			}
 		}
 	}
@@ -504,7 +578,7 @@ body{
 					    font-weight: 100;
 					    font-size: 20px;
 					    box-shadow: none;
-					    @media only screen and ( max-width:768px ){
+					    @media only screen and ( max-width:767px ){
 					    	position: static;
 						    color: #222;
 						    float: none;
@@ -530,7 +604,7 @@ body{
 			header{
 				&.col-md-12{
 					height: auto;
-					@media only screen and(max-width: 768px){
+					@media only screen and(max-width: 767px){
 						margin-top: 30px;
 					}
 				}
@@ -584,7 +658,7 @@ body{
 						margin-bottom: 0px;
 						height: auto;
 						padding: 30px 30px 0px 30px;
-						@media only screen and( max-width: 768px ){
+						@media only screen and( max-width: 767px ){
 							position: static;
 						    height: auto;
 						    margin-top: 0px;
@@ -644,5 +718,11 @@ body{
 	}
 	footer.site-footer{
 		background-color: #181818;
+		.wrap{
+			p{
+				color: #fff;
+				font-size: 18px;
+			}
+		}
 	}
 }
