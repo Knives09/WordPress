@@ -39,6 +39,7 @@ body{
 			color: #fff;
 			margin-left: 50px;
 			position: relative;
+			cursor: pointer;
 			@media only screen and( max-width:767px ){
 				font-size: 16px;
     			line-height: 41px;
@@ -218,9 +219,9 @@ body{
 				}
 			}
 			img{
-				height: 100%;
-				max-width: none !important;
-				width: auto;
+				width: 100%;
+			    max-width: none !important;
+			    height: auto;
 			}
 			.bx-pager{
 				display: none;
@@ -558,6 +559,29 @@ body{
 	.site-content-contain{
 		.list-cont{
 			margin-top: 40px;
+		}
+		.site-content{
+			.site-main{
+				.post-445{
+					.entry-content{
+						width: 100% !important;
+						ul{
+							list-style-type: none;
+						}
+						p{
+							span{
+								color: #222 !important;
+							}
+						}
+						span{
+							color: #222 !important;
+						}
+						img{
+							border: 4px solid #ccc;
+						}
+					}
+				}
+			}
 		}
 		article{
 			header{

@@ -18,7 +18,7 @@
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="wrap">
-				<p>Cognitivismo.com</p>
+				<p>Cognitivismo.com <a href="./redazione" title="" style="color: #fff; font-weight: 100; text-decoration: none;">| Redazione</a></p>
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->

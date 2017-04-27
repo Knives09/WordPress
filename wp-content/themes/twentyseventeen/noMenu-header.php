@@ -24,16 +24,16 @@
 
 <body <?php body_class(); ?>>
 <header class="header2">
-	<h1>cognitivismo.com</h1>
+	<h1 onclick="location.href='<?php echo(home_url()); ?>'">cognitivismo.com</h1>
 	<a href="#" title=""><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 </header><!-- /header -->
 <div class="side-menu">
 	<nav>
 		<ul>
-			<li><a href="" title="">Ricerca</a></li>
-			<li><a href="" title="">Psicoterapia</a></li>
-			<li><a href="" title="">Homepage</a></li>
-			<li><a href="" title="">Journal Club</a></li>
+			<li><a href="./category/ricerca-in-psicoterapia-2/" title="">Ricerca</a></li>
+			<li><a href="./category/psicoterapia-2/" title="">Psicoterapia</a></li>
+			<li><a href="<?php echo(home_url());?>" title="">Homepage</a></li>
+			<li><a href="./category/web-journal/" title="">Journal Club</a></li>
 		</ul>
 		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 	</nav>
@@ -52,11 +52,18 @@
 
 	<?php
 	// If a regular post or page, and not the front page, show the featured image.
-	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
+	// If a regular post or page, and not the front page, show the featured image.
+	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) {
 		echo '<div class="single-featured-image-header">';
 		the_post_thumbnail( 'twentyseventeen-featured-image' );
 		echo '</div><!-- .single-featured-image-header -->';
-	endif;
+	}
+	else if ( ! has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) )
+	{
+		echo '<div class="single-featured-image-header">';
+		echo '<img src="http://wordpress/wp-content/uploads/2017/02/people-03.png" alt="">';
+		echo '</div><!-- .single-featured-image-header -->';
+	}
 	?>
 
 	<div class="site-content-contain">
