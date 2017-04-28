@@ -52,7 +52,8 @@ while ( $loop->have_posts() ) : $loop->the_post();
 				$full = wp_get_attachment_image_src($attachment_id, 'full', true);
 				$attachment_details = get_post( $attachment_id );
 				$src = $attachment_details->guid;
-				$title = $attachment_details->post_title;				
+				$title = $attachment_details->post_title;
+				$description = $attachment_details->post_content;				
 				$video_type =  $gallery_settings['slide-type'][$count];
 				$video_id =  $gallery_settings['slide-link'][$count];
 				$poster_type = $gallery_settings['poster-type'][$count];
@@ -67,7 +68,9 @@ while ( $loop->have_posts() ) : $loop->the_post();
 				}
 					?>
 					<div class="single-image <?php echo $col_large_desktops; ?> <?php echo $col_desktops; ?> <?php echo $col_tablets; ?> <?php echo $col_phones; ?>">
-						<img class="thumbnail vid-<?php echo $video_gallery_id; ?>" src="<?php echo $thumbnail_url; ?>" alt="<?php echo $title; ?>" data-video-id="<?php echo $video_type; ?>-<?php echo $video_id; ?>" alt="<?php echo $title; ?>">
+						<div> <?php echo $title; ?></div>
+							<img class="thumbnail vid-<?php echo $video_gallery_id; ?>" src="<?php echo $thumbnail_url; ?>" alt="<?php echo $title; ?>" data-video-id="<?php echo $video_type; ?>-<?php echo $video_id; ?>" alt="<?php echo $title; ?>">
+						<div> <?php echo $description; ?> </div>
 					</div>
 					<?php
 				$count++;

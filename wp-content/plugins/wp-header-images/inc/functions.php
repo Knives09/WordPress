@@ -140,7 +140,7 @@
 		
 		global $wphi_dir;
 		$args = array( 'taxonomy'=>'nav_menu', 'hide_empty' => true );
-		$menus = get_terms($args);
+		$menus = wp_get_nav_menus();//get_terms($args);
 		$wp_header_images = get_option( 'wp_header_images');
 		
 
@@ -168,16 +168,20 @@
 		foreach ( $menus as $menu ):
 		$menu_items = wp_get_nav_menu_items($menu->name);
 		if(!empty($menu_items)){
-			//pre($menu_items);
 			foreach($menu_items as $items){
 				$parent = $items->menu_item_parent;
+				
 				$arr[$items->ID] = $parent;
-				$arr_obj[$items->object_id] = $items->ID;
-				$arr_urls[$items->object_id] = $items->url;
+				//pre($arr_obj);
+				$key = $items->object_id;
+				$arr_obj[$key][$items->ID] = $items->ID;
+				$arr_urls[$key][$items->ID] = $items->url;
+				
 			}
 		}
 		endforeach;
 		
+		//pree($arr_obj);
 		//pre(get_the_ID());
 		//pre($page_id);
 		//pre($cur_cat_id);
@@ -185,24 +189,45 @@
 		//pre(is_page());
 		//pre(is_archive());
 		//pre(is_shop());
+		//pre($_SERVER);
 		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-		
-		if($page_id==0 && is_array($arr_urls)){
-			$page_id = array_search($actual_link, $arr_urls);
+		if(array_key_exists('HTTPS', $_SERVER) && $_SERVER['HTTPS']=='on'){
+			$actual_link = str_replace('http://', 'https://', $actual_link);
 		}
+		
+		$obj_id = 0;
+		if($page_id!=0 && array_key_exists($page_id, $arr_urls)){
+			if(count($arr_urls[$page_id])>0){
+				$obj_id = array_search($actual_link, $arr_urls[$page_id]);
+				//$arr_obj[$page_id] = array($arr_obj[$page_id][$obj_id]);
+			}else{
+			}
+		}
+			
+		if($page_id==0 && is_array($arr_urls)){
+			foreach($arr_urls as $expected_page_id => $arr_url){
+				
+				if($page_id==0){
+					$obj_id = array_search($actual_link, $arr_url);
+					if($obj_id>0){
+						$page_id = $expected_page_id;
+					}
+				}
+				
+				
+			}
+		}
+		
 		if($page_id==0){
 			$page_id = current(array_keys($arr_obj));
 		}
-		
-		$parent_id = $arr_obj[$page_id];	
 
-		//pre($arr_obj);
-		//pre($parent_id);
-		//pre($wp_header_images);
+		
+		$parent_id = $arr_obj[$page_id][$obj_id];	
+
 		
 		$img_id = $wp_header_images[$parent_id];
 		
-		//pre($wp_header_images);
 		
 		if($img_id>0){
 			$img_url = wp_get_attachment_url( $img_id );			
@@ -211,4 +236,3 @@
 			}
 		}
 	}
-	

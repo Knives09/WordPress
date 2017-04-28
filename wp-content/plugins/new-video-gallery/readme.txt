@@ -1,16 +1,18 @@
-=== YouTube Vimeo Video Gallery ===
+=== Video Gallery YouTube ===
 Contributors: awordpresslife
-Tags: video, gallery, vimeo gallery, video gallery, video gallery plugins, videos, vimeo, WordPress gallery, WordPress video, WordPress video gallery, you tube, you tube gallery, you tube video gallery
+Tags: gallery, video gallery, youtube, responsive gallery, image gallery, photo , image, image gallery, content gallery, vimeo gallery, video slider, slider, video slider, video plugin, wordpress, wordpress plugin
 Donate link: http://awplife.com/
 Requires at least: 4.0
 Tested up to: 4.7.1
-Stable tag: 0.1.8
+Stable tag: 0.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Ultimate Video Gallery Plugin Create YouTube Gallery Create Vimeo Gallery
+Gallery Plugin Create YouTube Gallery & Create Vimeo Gallery
 
 == Description ==
+
+Gallery Plugin Create YouTube Gallery & Create Vimeo Gallery into your wordpress site. 
 
 This is very simple and easy video gallery plugin. Create video gallery shortcodes and publish on your blog.
 You can create YouTube video galleries and Vimeo video galleries using plugin.
@@ -28,7 +30,7 @@ Copy your video gallery shortcode like **[VIDGAL id=001]** and gallery is ready.
 > * [Male Artist Drake](http://demo.awplife.com/video-gallery-premium/drake/ "Male Artist Drake")
 > * [Female Artist selena gomez](http://demo.awplife.com/video-gallery-premium/selena-gomez/ "Female Artist selena gomez")
 > * [Sports Videos](http://demo.awplife.com/video-gallery-premium/sports-videos/ "Sports Videos")
-> * [Faishion Videos](http://demo.awplife.com/video-gallery-premium/fashion-videos/ "Faishion Video")
+> * [Fashion Videos](http://demo.awplife.com/video-gallery-premium/fashion-videos/ "Fashion Video")
 > * [Dance Videos](http://demo.awplife.com/video-gallery-premium/dance-videos/ "Dance Video")
 > * [Funny Videos](http://demo.awplife.com/video-gallery-premium/funny-videos/ "Funny Videos")
 
@@ -124,6 +126,46 @@ https://wordpress.org/support/plugin/new-video-gallery/
 7. Video Gallery Settings
 
 == Changelog ==
+Feature Enhancements: Version 0.2.5
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.2.4
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.2.3
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.2.2
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.2.1
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.2.0
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.1.10
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
+Feature Enhancements: Version 0.1.9
+* Enhancements: None
+* Bug Fix: None
+* Additional changes: None
+
 Feature Enhancements: Version 0.1.8
 * Enhancements: None
 * Bug Fix: None

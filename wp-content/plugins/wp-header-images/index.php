@@ -16,7 +16,7 @@ Description: WP Header Images is a great plugin to implement custom header image
 
 
 
-Version: 1.4.7
+Version: 1.4.9
 
 
 
@@ -54,7 +54,7 @@ License: GPL3
 
 	$hi_pro = file_exists($wphi_premium_scripts);
 
-	if($wphi_premium){
+	if($hi_pro){
 		
 		wphi_backup_pro();
 		include($wphi_premium_scripts);

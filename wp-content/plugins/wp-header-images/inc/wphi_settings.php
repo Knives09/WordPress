@@ -55,7 +55,7 @@
 
 <?php
 	$args = array( 'taxonomy'=>'nav_menu', 'hide_empty' => true );
-	$menus = get_terms($args);
+	$menus = wp_get_nav_menus();//get_terms($args);
 	$m = 0;
 	$str = 'Click here to set header image';
 	if(!empty($menus)){

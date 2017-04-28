@@ -3,7 +3,7 @@
 Plugin Name: 	New Video Gallery
 Plugin URI: 	http://awplife.com/
 Description: 	Create YouTube Vimeo Video Galleries Into WordPress Blog
-Version: 		0.1.8
+Version: 		0.2.5
 Author: 		A WP Life
 Author URI: 	http://awplife.com/
 License: 		GPL2
@@ -174,6 +174,7 @@ if ( ! class_exists( 'New_Video_Gallery' ) ) {
 						$attachment = get_post( $id );
 						$image_link =  $allimagesetting['slide-link'][$count];
 						$image_type =  $allimagesetting['slide-type'][$count];
+						$image_desc =  $allimagesetting['slide-desc'][$count];
 						$poster_type = $allimagesetting['poster-type'][$count];
 						?>
 						<li class="slide">
@@ -186,6 +187,7 @@ if ( ! class_exists( 'New_Video_Gallery' ) ) {
 							</select>
 							<input type="text" name="slide-link[]" id="slide-link[]" style="width: 100%;" placeholder="Enter YouTube / Vimeo Video ID" value="<?php echo $image_link; ?>">
 							<input type="text" name="slide-title[]" id="slide-title[]" style="width: 100%;" placeholder="Video Title" value="<?php echo get_the_title($id); ?>">
+							<textarea name="slide-desc[]" id="slide-desc[]" placeholder="Video Description" style="height: 120px; width: 275px;"><?php echo $attachment->post_content; ?></textarea>
 							<select id="poster-type[]" name="poster-type[]" style="width: 100%;" value="<?php echo $poster_type; ?>">
 								<optgroup label="Select Poster Option">
 								<option value="internal" <?php if($poster_type == "internal") echo "selected"; ?>>Use Above Poster</option>
@@ -236,6 +238,7 @@ if ( ! class_exists( 'New_Video_Gallery' ) ) {
 				</select>
 				<input type="text" name="slide-link[]" id="slide-link[]" style="width: 100%;" placeholder="Enter YouTube / Vimeo Video ID">
 				<input type="text" name="slide-title[]" id="slide-title[]" style="width: 100%;" placeholder="Video Title" value="<?php echo get_the_title($id); ?>">
+				<textarea name="slide-desc[]" id="slide-desc[]" placeholder="Video Description" style="height: 120px; width: 275px;"><?php echo $attachment->post_content; ?></textarea>
 				<select id="poster-type[]" name="poster-type[]" style="width: 100%;" value="<?php echo $poster_type; ?>">
 					<optgroup label="Select Poster Option">
 					<option value="internal">Use Above Poster</option>
@@ -256,12 +259,14 @@ if ( ! class_exists( 'New_Video_Gallery' ) ) {
 			if (isset($_POST['vg-settings'] ) == "vg-save-settings") {
 				$image_ids = $_POST['slide-ids'];
 				$image_titles = $_POST['slide-title'];
+				$image_descs = $_POST['slide-desc'];
 				$image_types = $_POST['slide-type'];
 				$i = 0;
 				foreach($image_ids as $image_id) {
 					$single_image_update = array(
 						'ID'           => $image_id,
 						'post_title'   => $image_titles[$i],
+						'post_content' => $image_descs[$i],
 					);
 					wp_update_post( $single_image_update );
 					$i++;

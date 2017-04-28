@@ -8,7 +8,7 @@
  * @version 1.0
  */
 $apiKey = "AIzaSyDy297Ybz3L5m_Ik9jKN_ewNQwHV73_iko";
-$playlistId = 'PLBFDuUOPixgCYZmg_vfJ5TSWf7L1Ou1Q4';
+$playlistId = 'PL0DvaoMMCTA0ChQ8zjZWGwVMcqwi6DJK3';
 $linkVideos = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=".$playlistId."&key=".$apiKey."&maxResults=6";
 $response = file_get_contents($linkVideos);
 $res = json_decode($response);
@@ -100,7 +100,7 @@ $data = "";
 					<div class="col-md-4 col-sm-4 video-homepage"> 
                         <div class="half">
                             <article class="article">
-                                <a href="<?php echo "./video-details?videoid=$idVideo"?>">
+                                <a href="<?php echo "https://www.youtube.com/watch?v=".$idVideo ?>" target="_blank">
                                 <figure class="gallery-media">
                                     <img src="<?php echo $thumbnails; ?>" alt="">
                                 </figure>

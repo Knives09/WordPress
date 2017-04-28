@@ -1,7 +1,7 @@
 .wpcolumn, .wpcolumns {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .wpsisac-slick-slider, .wpsisac-slick-carousal{clear:both;}
 
-.wpsisac-slick-slider h2{margin:5px 0 !important; font-size:26px; line-height:35px; }
+.wpsisac-slick-slider h2{margin:5px 0 !important; font-size:30px; line-height:35px; }
 
 .slick-image-slide{position:relative;}
 
@@ -21,6 +21,7 @@
 
 .wpsisac-slick-slider.design-2 .slick-image-slide img{max-width:100%; height:auto; display:inline-block;}
 .wpsisac-slick-slider.design-2 .slick-image-slide {width:100%; }
+.wpsisac-slick-slider.design-2 .slick-image-slide .slide-wrap .slider-overlay{background:rgba(0,0,0,0.4); position:absolute; left:0; right:0; bottom:0; top:0;}
 .wpsisac-slick-slider.design-2 .slick-image-slide .slide-wrap .slider-content{
 	z-index: 1000;color: #fff;position: absolute; left: 0;text-align: center;width: 80%;	top: 50%;-webkit-transform: translateY(-50%);transform: translateY(-50%);right: 0;margin:0 auto;float: left;}
 .wpsisac-slick-slider.design-2 .slick-image-slide .slide-wrap .slide-title{color:#fff; text-shadow: 0 1px 2px #000;}

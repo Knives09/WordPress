@@ -9,7 +9,7 @@ Requires at least: 3.0.1
 Tested up to: 4.7
 
 
-Stable tag: 1.4.7
+Stable tag: 1.4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -118,6 +118,11 @@ It's better to post on support forum but if you need it be fixed on urgent basis
 9. WP Header Images > How to clear/remove header images?
 
 == Changelog ==
+= 1.4.9 =
+* get_terms updated to wp_get_nav_menus [Thanks to Deborah Bellony]
+= 1.4.8 =
+* HTTP and HTTPS related issue resolved for WooCommerce shop page. [Thanks to Ricardo Heikamp]
+* Mobile responsive height auto settings. [Thanks to delcour]
 = 1.4.7 =
 * Single post can have default home banner. [Thanks to Lucia Hsieh]
 = 1.4.4 =
@@ -144,6 +149,10 @@ It's better to post on support forum but if you need it be fixed on urgent basis
 * Initial Commit
 
 == Upgrade Notice ==
+= 1.4.9 =
+get_terms updated to wp_get_nav_menus [Thanks to Deborah Bee]
+= 1.4.8 =
+HTTP and HTTPS related issue resolved for WooCommerce shop page.
 = 1.4.7 =
 Single post can have default home image.
 = 1.4.4 =

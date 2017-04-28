@@ -222,6 +222,10 @@ body{
 				width: 100%;
 			    max-width: none !important;
 			    height: auto;
+			    @media only screen and( max-width:991px ){
+					height: 100%;
+					width: auto;
+				}
 			}
 			.bx-pager{
 				display: none;
@@ -430,15 +434,22 @@ body{
 	}
 	.wpsisac-slick-slider{
 		border: 1px solid #979797 !important;
+		@media only screen and(max-width: 991px){
+			margin-bottom: 15px;
+		}
 		.slick-image-slide{
 			img{
 				width: 100%;
 			}
 			.slide-wrap{
+				.slider-overlay{
+					background: transparent !important;
+				}
 				.slider-content{
 					top: inherit !important;
 					bottom: -3px;
 					width: 100%  !important;
+					transform: translateY(0%) !important;
 					.slider-short-content{
 						position:absolute;
 						bottom: 0px;
@@ -458,6 +469,9 @@ body{
 							text-shadow: 0px;
 							text-shadow: 0 0px 0px #000;
 							margin-bottom: 0px;
+							@media only screen and(max-width: 767px){
+								max-height: 65px;
+							}
 						}
 					}
 				}
@@ -585,9 +599,26 @@ body{
 		}
 		article{
 			header{
-				margin-top: -300px;
+				margin-top: -200px;
+				@media only screen and(max-width: 991px){
+					margin-top: -150px;
+				}
+				@media only screen and(max-width: 767px){
+					position: static;
+				    margin-top: 0px;
+				    height: auto;
+				}
 				h1{
 					font-size: 30px !important;
+					text-shadow: 0px 0px 23px rgba(84, 84, 84, 0.9);
+					@media only screen and(max-width: 767px){
+						color: #222;
+					    font-size: 20px !important;
+					    position: relative;
+					    &:before{
+					    	border: 5px solid #222;
+					    }
+					}
 				}
 				.byline{
 					display: none;
@@ -602,6 +633,10 @@ body{
 					    font-weight: 100;
 					    font-size: 20px;
 					    box-shadow: none;
+					    text-shadow: 0px 0px 23px rgba(84, 84, 84, 0.9);
+					    &:focus{
+					    	border: 0px;
+					    }
 					    @media only screen and ( max-width:767px ){
 					    	position: static;
 						    color: #222;
