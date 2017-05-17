@@ -61,7 +61,7 @@
 	else if ( ! has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) )
 	{
 		echo '<div class="single-featured-image-header">';
-		echo '<img src="http://wordpress/wp-content/uploads/2017/02/people-03.png" alt="">';
+		echo '<img src="http://www.cognitivismo.com/wp-content/uploads/2017/02/people-03.png" alt="">';
 		echo '</div><!-- .single-featured-image-header -->';
 	}
 	?>

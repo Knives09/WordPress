@@ -8,7 +8,7 @@
  * @version 1.0
  */
 $apiKey = "AIzaSyDy297Ybz3L5m_Ik9jKN_ewNQwHV73_iko";
-$playlistId = 'PL0DvaoMMCTA0ChQ8zjZWGwVMcqwi6DJK3';
+$playlistId = 'PL0DvaoMMCTA3CPyjL6i9kbs6ZXGZCSBrP';
 $linkVideos = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=".$playlistId."&key=".$apiKey."&maxResults=6";
 $response = file_get_contents($linkVideos);
 $res = json_decode($response);

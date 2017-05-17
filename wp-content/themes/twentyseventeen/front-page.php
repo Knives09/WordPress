@@ -60,7 +60,7 @@ get_header(); ?>
 	<div class="row">
 		<div class="title col-md-12">
 			<h2>
-				FOTO
+				Le nostre scuole
 			</h2>
 		</div>
 	</div>
